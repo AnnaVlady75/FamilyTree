@@ -1,5 +1,8 @@
 package ru.gb.Family_Tree;
 
-public interface Writable {
-
-}
+//import java.io.BufferedWriter;
+//
+//public interface Writable {
+//    BufferedWriter;
+//
+//}

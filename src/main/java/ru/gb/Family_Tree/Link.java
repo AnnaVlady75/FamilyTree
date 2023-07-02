@@ -10,7 +10,7 @@ public class Link {
         this.hum2 = person2;
         this.relationships = relation;
     }
-    public Human getPeople() {
+    public Human getHuman() {
         return this.hum1;
     }
     public Human getRelationPeople() {

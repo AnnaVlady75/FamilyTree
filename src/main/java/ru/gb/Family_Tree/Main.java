@@ -1,6 +1,10 @@
 package ru.gb.Family_Tree;
 
-public class Main {
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.IOException;
+
+public class Main{
     public static void main(String[] args) {
         FamilyTree familyTree = new FamilyTree();
         Human mother = new Human("Anna",41,Gender.Female);
@@ -27,5 +31,16 @@ public class Main {
 
         System.out.println(" \n");
         Research.getRelation(son,familyTree);
+
+//        File myFile = new File("text.txt");
+//        try {
+//            BufferedWriter writer = new BufferedWriter(myFile,true);
+//            String lineSeparator = System.getProperty("line.separator");
+//            writer.write("For example"+lineSeparator);
+//            writer.flush();
+//            writer.close();
+//        }   catch (IOException e){
+//            e.printStackTrace();
+//        }
     }
 }
