@@ -1,18 +1,21 @@
 package ru.gb.Family_Tree;
 
 import java.io.BufferedWriter;
+import java.io.DataOutputStream;
 import java.io.File;
-import java.io.IOException;
+import java.io.FileOutputStream;
+import java.time.LocalDate;
+
 
 public class Main{
     public static void main(String[] args) {
         FamilyTree familyTree = new FamilyTree();
-        Human mother = new Human("Anna",41,Gender.Female);
-        Human father = new Human("Alex",42,Gender.Male);
-        Human son = new Human("Kirill",12,Gender.Male);
-        Human daughter = new Human("Veronika",3,Gender.Female);
-        Human granddad = new Human("Vladimir",77,Gender.Male);
-        Human grandma = new Human("Ludmila",75,Gender.Female);
+        Human mother = new Human("Anna", LocalDate.of(1973,2,21),Gender.Female);
+        Human father = new Human("Alex",LocalDate.of(1978,5,12),Gender.Male);
+        Human son = new Human("Kirill",LocalDate.of(1992,12,11),Gender.Male);
+        Human daughter = new Human("Veronika",LocalDate.of(2000,3,30),Gender.Female);
+        Human granddad = new Human("Vladimir",LocalDate.of(1955,5,12),Gender.Male);
+        Human grandma = new Human("Ludmila",LocalDate.of(1957,8,25),Gender.Female);
 
         familyTree.addLink(father,mother,Relations.Husband,Relations.Wife);
         familyTree.addLink(father,son,Relations.Father,Relations.Son);
@@ -32,15 +35,17 @@ public class Main{
         System.out.println(" \n");
         Research.getRelation(son,familyTree);
 
-//        File myFile = new File("text.txt");
-//        try {
-//            BufferedWriter writer = new BufferedWriter(myFile,true);
-//            String lineSeparator = System.getProperty("line.separator");
-//            writer.write("For example"+lineSeparator);
-//            writer.flush();
-//            writer.close();
-//        }   catch (IOException e){
-//            e.printStackTrace();
-//        }
-    }
+//        public void saveMethord(String file) {
+//            try (DataOutputStream ds = new DataOutputStream(new FileOutputStream(file))) {
+//                ds.writeInt(familyTree);
+//                for (Human it : familyTree.wait()) {
+//                    it.setName(ds);
+//                }
+//                ds.writeInt(relations.size());
+//                for (Relation it : relations) {
+//                    it.saveMethord(ds);
+//                }
+//            } catch (Exception ex) {
+//                System.out.println(ex.getMessage());
+            }
 }

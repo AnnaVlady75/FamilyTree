@@ -1,13 +1,16 @@
 package ru.gb.Family_Tree;
 
+import java.time.LocalDate;
+import java.time.Period;
+
 public class Human {
     private String name;
-    private int age;
+    private LocalDate birthDay;
     private Gender gender;
 
-    public Human(String name, int age,Gender gender) {
+    public Human(String name, LocalDate birthDay, Gender gender) {
         this.name = name;
-        this.age = age;
+        this.birthDay = birthDay;
         this.gender = gender;
     }
     public String getName(){
@@ -16,15 +19,12 @@ public class Human {
     public void setName(String name) {
         this.name = name;
     }
-    public int getAge(){
-        return age;
-    }
     public Gender getGender() {
         return gender;
     }
     @Override
     public String toString() {
-        return String.format("%s %s %s", name, age, gender);
+        return String.format("%s %s %s", name, birthDay , gender);
     }
 
 }
