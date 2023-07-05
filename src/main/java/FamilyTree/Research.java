@@ -1,6 +1,8 @@
-package ru.gb.Family_Tree;
+package FamilyTree;
 
-public class Research {
+import java.io.Serializable;
+
+public class Research implements Serializable {
     public static void getRelation(Human person, Relations relation, FamilyTree myTree) {
         for (Link info : myTree.getLinks()) {
             if (info.getHuman().getName().equals(person.getName())

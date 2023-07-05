@@ -1,4 +1,4 @@
-package ru.gb.Family_Tree;
+package FamilyTree;
 
 public enum Relations {
     Mother,Father,

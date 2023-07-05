@@ -1,9 +1,9 @@
-package ru.gb.Family_Tree;
+package FamilyTree;
 
+import java.io.Serializable;
 import java.time.LocalDate;
-import java.time.Period;
 
-public class Human {
+public class Human implements Serializable {
     private String name;
     private LocalDate birthDay;
     private Gender gender;

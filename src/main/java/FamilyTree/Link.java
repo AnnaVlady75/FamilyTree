@@ -1,6 +1,8 @@
-package ru.gb.Family_Tree;
+package FamilyTree;
 
-public class Link {
+import java.io.Serializable;
+
+public class Link implements Serializable {
     private Human hum1;
     private Human hum2;
     private Relations relationships;
